@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  --primary-font: 'Karla', sans-serif;
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: var(--light-gray);
+  color: var(--grayish-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 62rem) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
+.single-price {
+  max-width: 32rem;
+  margin: 4rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .single-price {
+    max-width: 64rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid-box {
+  padding: 2.25rem 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .grid-box {
+    padding: 4rem;
+  }
+}
+
+.join-community {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.join-community h1 {
+  color: var(--color-cyan);
+}
+
+.join-community p.description {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-bright-yellow);
+}
+
+.join-community p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 62rem) {
+  .join-community {
+    grid-column: 1/-1;
+  }
+  .join-community h1 {
+    font-size: 2.5rem;
+  }
+  .join-community p.description {
+    font-size: 1.8rem;
+  }
+  .join-community p {
+    font-size: 1.6rem;
+  }
+}
+
+.subscription {
+  background: var(--color-cyan);
+  color: #e9ffff;
+}
+
+.subscription h1 {
+  color: #e9ffff;
+  margin-bottom: 1rem;
+}
+
+.subscription p.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscription p.price strong {
+  font-size: 2.8rem;
+}
+
+.subscription p.price span {
+  color: var(--light-gray);
+}
+
+.subscription p.description {
+  margin-bottom: 2rem;
+}
+
+.subscription .sign-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fcffb4;
+  background: var(--color-bright-yellow);
+  width: 100%;
+  text-transform: capitalize;
+  padding: 1.25rem 0;
+  border: 2px solid var(--color-bright-yellow);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.why-us {
+  background: #4bbebc;
+  color: #e3ffff;
+}
+
+.why-us h1 {
+  margin-bottom: 1.5rem;
+}
+
+.why-us ul {
+  color: #e6e6e6;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=style.css.map */

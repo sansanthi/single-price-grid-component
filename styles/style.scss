@@ -1,0 +1,110 @@
+@import './variables';
+@import './general';
+
+@mixin flexbox($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin  centering {
+    justify-content: center;
+    align-items: center;
+}
+
+.single-price {    
+    max-width: 32rem;
+    margin: 4rem auto;    
+    border-radius: 0.5rem;
+    overflow: hidden;
+    @media screen and (min-width: 62rem) {
+        max-width: 64rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grid-box {
+    padding: 2.25rem 2rem;
+    @media screen and (min-width: 62rem) {
+        padding: 4rem;
+    }
+}
+
+.join-community {
+    background: #fff;
+    @include flexbox(column, 1.5rem);
+    
+    h1 {
+        color: var(--color-cyan);
+    }
+    
+    p.description {
+        line-height: 1.5;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--color-bright-yellow);
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    @media screen and (min-width: 62rem) {
+        grid-column: 1/-1;
+        h1 {
+            font-size: 2.5rem;
+        }
+        p.description {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+}
+.subscription {
+    background: var(--color-cyan);
+    color: #e9ffff;
+    h1 {
+        color: #e9ffff;
+        margin-bottom: 1rem;
+    }
+    p.price {
+        @include flexbox(row, 1.25rem);
+        align-items: center;
+        strong {
+            font-size: 2.8rem;
+            
+        }
+        span {
+            color: var(--light-gray)
+        }
+    }
+    p.description {
+        margin-bottom: 2rem;
+    }
+    .sign-btn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fcffb4;
+        background: var(--color-bright-yellow);
+        width: 100%;
+        text-transform: capitalize;
+        padding: 1.25rem 0;
+        border: 2px solid var(--color-bright-yellow);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+    }
+    
+}
+.why-us {
+    background: hsl(179, 47%, 52%);
+    color: #e3ffff;
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+    ul {
+        color: #e6e6e6;
+        font-size: 1.4rem;
+    }
+}
